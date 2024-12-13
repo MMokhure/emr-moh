@@ -1,4 +1,3 @@
-<Style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
@@ -120,7 +119,7 @@ nav ul li {
 	position: relative;
   width: 70px;
   cursor: pointer;
-	background: crimson;
+	background: #FFFAFA;
 	text-transform: uppercase;
 	transition:all .4s ease-out;
 }
@@ -128,7 +127,7 @@ nav ul li {
 nav ul li:after {
 	position: absolute;
 	background: white;
-	color: crimson;
+	color: #FFFAFA;
 	top:0;
 	left: 70px;
 	width: 70px; height: 100%;
@@ -140,7 +139,7 @@ nav ul li:after {
 
 nav ul li:nth-child(1):after { 
 	content: "Home";
-	line-height: 88px;
+	line-height: 30px;
 }
 nav ul li:nth-child(2):after { 
 	content: "About";
