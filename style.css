@@ -151,7 +151,7 @@ nav ul li:nth-child(3):after {
 }
 
 nav ul li:hover {
-	transform: translateX(-70px);
+	transform: translate(-70px);
 }
 
 nav ul li:hover:after {
