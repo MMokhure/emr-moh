@@ -77,25 +77,6 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-
-    <script>
-       <script type = "text/javascript" >
-    window.addEventListener("DOMContentLoaded", function() {
-        const yourForm = document.getElementById('clinic-selection-form');
-        yourForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const data = new FormData(yourForm);
-            const action = e.target.action;
-            fetch(action, {
-                method: 'POST',
-                body: data,
-            }).then(() => {
-                window.location.replace('https://mmokhure.github.io/emr-moh/thanks')
-            })
-        })
-    }); 
-</script>
-    </script>
     
 </body>
 </html>
