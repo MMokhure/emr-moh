@@ -101,6 +101,10 @@ svg path{
         border-style: double;
         border-radius: 2%;
     }
+
+    date {
+        margin-top 1%; 
+    }
 </Style>
 </head>
 <body>
@@ -123,8 +127,12 @@ svg path{
         </div>
     </nav>
  
-    <div class="container ">     
-        <h2 class="text-center">EMR Daily Updates</h2>
+    <div class="container ">
+    <div class="date">
+                <label for="date" class="form-label">Date</label>
+                <p class="" id="date" name="date"></p>
+            </div>
+        <h3 class="text-center">EMR Daily Updates</h3>
         <form id="clinic-selection-form" class="mt-4" action="https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec" method="POST">
              <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
