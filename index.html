@@ -35,45 +35,50 @@
 
     <div class="container mt-5">
         <h1 class="text-center">EMR Daily Updates</h1>
+        
         <form id="clinic-selection-form" class="mt-4" action="https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec" method="POST">
             <div class="mb-3">
                 <label for="clinicName" class="form-label">Health Facility</label>
                 <select class="form-select" id="clinicName" name="clinicName" required>
                     <option value="" disabled selected>Select a site</option>
-                    <option value="Clinic A">Ext 15 (Village Clinic)</option>
-                    <option value="Clinic B">Phase II</option>
-                    <option value="Clinic C">Glen valley (BDF)</option>
-                    <option value="Clinic D">Thebephatshwa AirBase (BDF)</option>
-                    <option value="Clinic E">Gabane Health Post</option>
-                    <option value="Clinic F">Lesetlhana Clinic</option>
-                    <option value="Clinic G">Morwa Clinic</option>
-                    <option value="Clinic H">Khayakholo Clinic</option>
+                    <option value="Ext 15 Clinic">Ext 15 (Village Clinic)</option>
+                    <option value="Phase II Clinic">Phase II</option>
+                    <option value="Glen valley Clinic">Glen valley (BDF)</option>
+                    <option value="Thebephatshwa AirBase Clinic">Thebephatshwa AirBase (BDF)</option>
+                    <option value="Gabane Health Post">Gabane Health Post</option>
+                    <option value="Lesetlhana Clinic">Lesetlhana Clinic</option>
+                    <option value="Morwa Clinic">Morwa Clinic</option>
+                    <option value="Khayakholo Clinic">Khayakholo Clinic</option>
                     <option value="Clinic I">Moshupa SDA Clinic</option>
-                    <option value="Clinic J">Mafitlhakgosi Clinic</option>
+                    <option value="Mafitlhakgosi Clinic">Mafitlhakgosi Clinic</option>
                 </select>
                 
             </div>
+            
             <div class="mb-3">
                 <label for="module" class="form-label">Module</label>
                 <select class="form-select" id="module" name="module" required>
                     <option value="" disabled selected>Select a module</option>
-                    <option value="Module1">Registration</option>
-                    <option value="Module2">Screening</option>
-                    <option value="Module3">HTS</option>
-                    <option value="Module4">Pharmacy</option>
-                    <option value="Module5">Consultation</option>
-                    <option value="Module6">VMMC</option>
-                    <option value="Module7">TB Clinic</option>
+                    <option value="Registration">Registration</option>
+                    <option value="Screening">Screening</option>
+                    <option value="OPD Consultation">Consultation</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="HTS">HTS</option>
+                    <option value="VMMC">VMMC</option>
+                    <option value="TB Clinic">TB Clinic</option>
                 </select>
             </div>
+            
             <div class="mb-3">
                 <label for="inputBox" class="form-label">Recorded</label>
                 <input type="number" class="form-control" id="StatRecorded" name"StatRecorded" required placeholder="Enter the number">
             </div>
+            
             <div class="mb-3">
               <label for="Textarea1" class="form-label">Notes</label>
               <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
             </div>
+            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
