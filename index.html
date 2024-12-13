@@ -76,50 +76,22 @@
     </div>
 
     <script>
-        //preventing form from submitting or refreshing
-        var form = document.getElementById("clinic-selection-form");
-        function handleForm(event) { event.preventDefault(); }
-        form.addEventListener('submit', handleForm);
-        //funtion
-        function insert(){
-            $(document).ready(Function(){
-                            var stats = [];
-                $("input[name=stats]").each(function(){
-                    if($(this).is(":checked")){
-                        stats.push($(this).val());
-                    }
-                });
-                $.ajax({
-                    //action
-                    URL:'https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec',
-                    //method
-                    type: 'POST',
-                    data: {
-                        //get values
-                        clinicName: $("input[name=clinicName]").val(),
-                        module: $("input[name=module]").val(),
-                        StatRecorded: $("input[name=StatRecorded]").val(),
-                        notes: $("input[name=notes]").val(),
-                        stats: stats.toString(),
-                        action: "insert"
-                    },
-                    success: function(response){
-                        if(response == 1){
-                            alert("Data added successfully!");
-                    }
-                        else if(response == 2){
-                            alert("facility not found plz try again");
-                        }
-                        else if(response == 3){
-                            alert("facility not found plz try again");
-                        }
-                        else{
-                            
-                        }
-                });
-        }
-
-        
+       <script type = "text/javascript" >
+    window.addEventListener("DOMContentLoaded", function() {
+        const yourForm = document.getElementById('clinic-selection-form');
+        yourForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(yourForm);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            }).then(() => {
+                window.location.replace('https://mmokhure.github.io/emr-moh/thanks')
+            })
+        })
+    }); 
+</script>
     </script>
     
 </body>
