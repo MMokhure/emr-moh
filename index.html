@@ -79,18 +79,18 @@
         </form>
     </div>
 <script>
-	$('#clinic-selection-form').submit(function(e){
-    e.preventDefault();
+
+	function SubForm (){
     $.ajax({
         url: 'https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec',
-        type: 'POST',
-        data:$('#clinic-selection-form').serialize(),
-        success:function(){
-            // Whatever you want to do after the form is successfully submitted
-		alert (data added);
+        type: 'post',
+        data: $('#clinic-selection-form').serialize(),
+        success: function(){
+            alert("worked");
         }
     });
-});
+}
+	
 </script>
     
 </body>
