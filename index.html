@@ -41,82 +41,45 @@
 
     <div class="container mt-5">
         <h1 class="text-center">EMR Daily Updates</h1>
-        <form id="clinic-selection-form" class="mt-4">
+        <form id="clinic-selection-form" class="mt-4" action="https://script.google.com/macros/s/AKfycbwp3lqS0nxzXXWoWS6K_TbWDTooRJ4XEfOOcs_flHVZLmYawK6E6Tios4NevDLa_-lRGw/exec" method="POST">
             <div class="mb-3">
                 <label for="clinicName" class="form-label">Site</label>
                 <select class="form-select" id="clinicName" required>
                     <option value="" disabled selected>Select a site</option>
-                    <option value="Clinic A">Ext 15 (Village Clinic)</option>
-                    <option value="Clinic B">Phase II</option>
-                    <option value="Clinic C">Glen valley (BDF)</option>
-                    <option value="Clinic D">Thebephatshwa AirBase (BDF)</option>
-                    <option value="Clinic E">Gabane Health Post</option>
-                    <option value="Clinic F">Lesetlhana Clinic</option>
-                    <option value="Clinic G">Morwa Clinic</option>
-                    <option value="Clinic H">Khayakholo Clinic</option>
-                    <option value="Clinic I">Moshupa SDA Clinic</option>
-                    <option value="Clinic J">Mafitlhakgosi Clinic</option>
+                    <option value="Ext 15 (Village Clinic)">Ext 15 (Village Clinic)</option>
+                    <option value="Phase II clinic">Phase II</option>
+                    <option value="Glen valley (BDF)">Glen valley (BDF)</option>
+                    <option value="Thebephatshwa AirBase (BDF)">Thebephatshwa AirBase (BDF)</option>
+                    <option value="Gabane Health Post">Gabane Health Post</option>
+                    <option value="Lesetlhana Clinic">Lesetlhana Clinic</option>
+                    <option value="Morwa Clinic">Morwa Clinic</option>
+                    <option value="Khayakholo Clinic">Khayakholo Clinic</option>
+                    <option value="Moshupa SDA Clinic">Moshupa SDA Clinic</option>
+                    <option value="Mafitlhakgosi Clinic">Mafitlhakgosi Clinic</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="module" class="form-label">Module</label>
                 <select class="form-select" id="module" required>
                     <option value="" disabled selected>Select a module</option>
-                    <option value="Module1">Registration</option>
-                    <option value="Module2">Screening</option>
-                    <option value="Module3">HTS</option>
-                    <option value="Module4">Pharmacy</option>
-                    <option value="Module5">Consultation</option>
-                    <option value="Module6">VMMC</option>
-                    <option value="Module7">TB Clinic</option>
+                    <option value="Registration">Registration</option>
+                    <option value="Screening">Screening</option>
+                    <option value="HTS">HTS</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="VMMC">VMMC</option>
+                    <option value="TB Clinic">TB Clinic</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="inputBox" class="form-label">Recorded</label>
-                <input type="number" class="form-control" id="inputBox" required placeholder="Enter the number">
+                <label for="recorded" class="form-label">Recorded</label>
+                <input type="number" class="form-control" id="recorded" required placeholder="Enter the number">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
-    <script>
-        const form = document.getElementById("clinic-selection-form");
-        const scriptURL = "https://script.google.com/macros/s/AKfycbwp3lqS0nxzXXWoWS6K_TbWDTooRJ4XEfOOcs_flHVZLmYawK6E6Tios4NevDLa_-lRGw/exec"; // Replace with your script URL
-
-        form.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            // Get form data
-            const data = {
-                clinicName: document.getElementById("clinicName").value,
-                module: document.getElementById("module").value,
-                recorded: document.getElementById("inputBox").value,
-            };
-
-            try {
-                const response = await fetch(scriptURL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                });
-
-                const result = await response.json();
-
-                // Handle success or failure response
-                if (result.status === "success") {
-                    alert("Data submitted successfully!");
-                    form.reset();
-                } else {
-                    alert("Submission failed: " + result.message);
-                }
-            } catch (error) {
-                console.error("Error!", error.message);
-                alert("An error occurred. Please try again.");
-            }
-        });
-    </script>
+    
 </body>
 
 </html>
