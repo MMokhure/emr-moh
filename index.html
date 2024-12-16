@@ -64,11 +64,11 @@
                     <option value="" disabled selected>Select a module</option>
                     <option value="Registration">Registration</option>
                     <option value="Screening">Screening</option>
-                    <option value="HTS">HTS</option>
-                    <option value="Pharmacy">Pharmacy</option>
                     <option value="Consultation">Consultation</option>
-                    <option value="VMMC">VMMC</option>
+                    <option value="Pharmacy">Pharmacy</option>
                     <option value="TB Clinic">TB Clinic</option>
+                    <option value="VMMC">VMMC</option>
+                    <option value="HTS">HTS</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -95,6 +95,7 @@
         {
           alert("Data entered successfully"); // show response from the php script.
         }
+	    window.location.reload();
     });
     
 });
