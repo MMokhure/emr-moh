@@ -42,7 +42,11 @@
     <div class="container mt-5">
         <h1 class="text-center">EMR Daily Updates</h1>
         <form id="clinic-selection-form" class="mt-4" action="https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec" method="POST">
-            <div class="mb-3">
+          <div class="mb-3">
+		<label for="date">Date:</label>
+  <input type="date" id="date" name="date">
+	  </div>
+		<div class="mb-3">
                 <label for="clinicName" class="form-label">Faclility</label>
                 <select class="form-select" name= "clinicName" id="clinicName" required>
                     <option value="" disabled selected>Select a Faclility</option>
