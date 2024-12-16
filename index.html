@@ -80,16 +80,24 @@
     </div>
 <script>
 
-	function SubForm (){
+	$("#clinic-selection-form").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
     $.ajax({
-        url: 'https://script.google.com/macros/s/AKfycbzTcwpfOf36jYvw3gUIhlxhGJSQGidhw0JKC5jYi-l-tbpjTwqEwSYWyMEpFYuJ0c2luw/exec',
-        type: 'post',
-        data: $('#clinic-selection-form').serialize(),
-        success: function(){
-            alert("worked");
+        type: "POST",
+        url: actionUrl,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          alert(data); // show response from the php script.
         }
     });
-}
+    
+});
 	
 </script>
     
